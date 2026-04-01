@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quadratic Equation Solver</title>
+</head>
+<body>
+    <script>
+        // 获取用户输入的系数a、b、c
+        let a = prompt("Enter coefficient a (a > 0):");
+        let b = prompt("Enter coefficient b:");
+        let c = prompt("Enter coefficient c:");
+
+        // 将输入转换为数字
+        a = parseFloat(a);
+        b = parseFloat(b);
+        c = parseFloat(c);
+
+        // 计算判别式delta
+        let delta = b * b - 4 * a * c;
+
+        // 计算两个根
+        let x1 = (-b + Math.sqrt(delta)) / (2 * a);
+        let x2 = (-b - Math.sqrt(delta)) / (2 * a);
+
+        // 用alert弹窗显示结果
+        alert(`The roots are x1 = ${x1.toFixed(2)} and x2 = ${x2.toFixed(2)}`);
+
+        // 用console.log在控制台输出结果
+        console.log(`Quadratic equation results: x1 = ${x1.toFixed(2)}, x2 = ${x2.toFixed(2)}`);
+    </script>
+</body>
+</html>
